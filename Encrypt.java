@@ -42,7 +42,7 @@ class EncryptDecrypt {
 
 }
 
-public class Homework {
+public class Encrypt {
   public static void main(String[] args) {
     EncryptDecrypt obj = new EncryptDecrypt();
     Scanner sc = new Scanner(System.in);
