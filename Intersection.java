@@ -43,12 +43,10 @@ public class Intersection {
     for (int i = 0; i < size; i++) {
       if (search(ob, a[i], ob.size) && !search(t, a[i], x)) {
         t.a[x++] = a[i];
-
       }
-      t.size = x;
-      return t;
-
     }
+    t.size = x;
+    return t;
   }
 
   public static void main(String[] args) {
