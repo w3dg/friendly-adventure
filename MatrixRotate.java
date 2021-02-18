@@ -2,11 +2,11 @@ import java.util.Scanner;
 
 public class MatrixRotate {
 
-  // public static int[][] rotate90andshow(int arr[][]) {
+  public static int[][] rotate90andshow(int arr[][]) {
 
-  // System.out.println(arr);
-  // return arr;
-  // }
+    System.out.println(arr);
+    return arr;
+  }
 
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
@@ -24,6 +24,6 @@ public class MatrixRotate {
       }
     }
     System.out.println("After 90 rotation");
-    // int after90 = rotate90andshow(a);
+    int[][] after90 = rotate90andshow(a);
   }
 }

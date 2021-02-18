@@ -17,7 +17,7 @@ public class Pangram {
     Scanner sc = new Scanner(System.in);
     System.out.println("Enter a sentence");
     String s = sc.nextLine().toUpperCase();
-
+    sc.close();
     int count = 0;
     boolean flag = true;
 

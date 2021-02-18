@@ -24,7 +24,7 @@ public class ISBN {
     Scanner sc = new Scanner(System.in);
     System.out.println("Enter an ISBN number");
     String isbn = sc.nextLine();
-
+    sc.close();
     if (isValid(isbn)) {
       int sum = 0;
 
@@ -39,7 +39,7 @@ public class ISBN {
       else
         System.out.println("Not ISBN");
     } else {
-      System.out.println("Input Input");
+      System.out.println("Invalid Input");
     }
   }
 }
