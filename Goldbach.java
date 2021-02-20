@@ -10,6 +10,7 @@ public class Goldbach {
     Scanner sc = new Scanner(System.in);
     System.out.println("Enter a number");
     n = sc.nextInt();
+    // positive even integer check.
     sc.close();
   }
 

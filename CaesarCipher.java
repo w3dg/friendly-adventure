@@ -9,14 +9,14 @@ public class CaesarCipher {
     for (int i = 0; i < str.length(); i++) {
       char ch = str.charAt(i);
       if (ch >= 'A' && ch <= 'Z') {
-        // HELLO MY NAME IS DEBOPAM GUPTA I AM FROM THE NAZI , GERMANY, COME JOIN US.
         finalStr += (char) (((int) str.charAt(i) + 13 - 65) % 26 + 65);
       } else if (ch >= 'a' && ch <= 'z') {
-        // hello my name is debopam gupta i am from the nazi , germany, come join us.
         finalStr += (char) (((int) str.charAt(i) + 13 - 97) % 26 + 97);
       } else {
         finalStr += ch;
       }
+      // OR
+
     }
     return finalStr;
   }
