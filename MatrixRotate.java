@@ -24,6 +24,6 @@ public class MatrixRotate {
       }
     }
     System.out.println("After 90 rotation");
-    int[][] after90 = rotate90andshow(a);
+    // int[][] after90 = rotate90andshow(a);
   }
 }

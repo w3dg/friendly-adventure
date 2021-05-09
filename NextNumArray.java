@@ -1,3 +1,4 @@
+import java.util.Scanner;
 // 2d array
 
 // prime nos -> next prime
@@ -21,21 +22,72 @@ public class NextNumArray {
     return true;
   }
 
-  static int nextPrime(int n) {
+  static int nextTerm(int n) {
 
-    boolean notFound = true;
+    if (isPrime(n)) {
+      boolean notFound = true;
 
-    while (notFound) {
-      n++;
-      if (isPrime(n))
-        return n;
+      while (notFound) {
+        n++;
+        if (isPrime(n))
+          return n;
+      }
     }
+
+    else {
+      boolean notFound = true;
+
+      while (notFound) {
+        n++;
+        if (!isPrime(n))
+          return n;
+      }
+    }
+
     return 0;
+
   }
 
   public static void main(String[] args) {
-    System.out.println(nextPrime(5));
-    System.out.println(nextPrime(11));
-    System.out.println(nextPrime(2));
+
+    int arr[][];
+
+    System.out.println("Enter size of rows and cols");
+
+    Scanner sc = new Scanner(System.in);
+    int r = sc.nextInt();
+    int c = sc.nextInt();
+
+    arr = new int[r][c];
+
+    System.out.println("Enter elements in the matrix");
+    for (int i = 0; i < r; i++) {
+      for (int j = 0; j < c; j++) {
+        arr[i][j] = sc.nextInt();
+      }
+    }
+
+    System.out.println("Original Matrix");
+    for (int i = 0; i < r; i++) {
+      for (int j = 0; j < c; j++) {
+        System.out.print(arr[i][j] + "\t");
+      }
+      System.out.println();
+    }
+
+    for (int i = 0; i < r; i++) {
+      for (int j = 0; j < c; j++) {
+        arr[i][j] = nextTerm(arr[i][j]);
+      }
+    }
+
+    System.out.println("New Matrix");
+    for (int i = 0; i < r; i++) {
+      for (int j = 0; j < c; j++) {
+        System.out.print(arr[i][j] + "\t");
+      }
+      System.out.println();
+    }
+    sc.close();
   }
 }

@@ -10,6 +10,7 @@ public class Banner2018 {
 
     if (n < 3 || n > 8) {
       System.out.println("Invalid Input");
+      sc.close();
       return;
 
     }
@@ -40,6 +41,6 @@ public class Banner2018 {
       }
       System.out.println();
     }
-
+    sc.close();
   }
 }

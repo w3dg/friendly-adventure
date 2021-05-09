@@ -10,6 +10,7 @@ public class WordSort2020 {
     char last = s.charAt(s.length() - 1);
     if (!(last == '.' || last == '?' || last == '!')) {
       System.out.println("Invalid Input");
+      sc.close();
       return;
     }
     s = s.substring(0, s.length() - 1); // removes the end letter for working.
@@ -37,5 +38,6 @@ public class WordSort2020 {
       System.out.print(" " + z);
     }
     System.out.print(last);
+    sc.close();
   }
 }
