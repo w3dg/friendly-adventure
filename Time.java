@@ -1,7 +1,8 @@
 public class Time {
   int hour, minute, second;
 
-  // normal constructor give pls
+  // normal constructor give pls if we write a parameterised constructor , default
+  // constructor will not be provided by the compiler.
 
   // param constr
   public Time(int h, int minute, int s) {

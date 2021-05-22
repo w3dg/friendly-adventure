@@ -29,6 +29,16 @@ public class Recursions {
     return s.charAt(s.length() - 1) + reverseStrRec(s.substring(0, s.length() - 1));
   }
 
+  static int reverseInt(int n) {
+
+    // 123
+
+    if (n == 0) {
+      return 0;
+    }
+    return (n % 10) * (int) Math.pow(10, Math.log10(n)) + reverseInt(n / 10);
+  }
+
   static int digitsRaisedToPower(int n, int p) {
     if (n == 0)
       return 0;
@@ -42,6 +52,7 @@ public class Recursions {
     isHappy(4);
 
     System.out.println("MOM".equals(reverseStrRec("MOM")) ? "Palindrome" : "Not a palindrome");
+    System.out.println(121 == reverseInt(121) ? "Palindrome" : "Not a palindrome");
 
     Scanner sc = new Scanner(System.in);
     System.out.println("Enter a number");
