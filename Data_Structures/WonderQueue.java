@@ -1,3 +1,5 @@
+package Data_Structures;
+
 public class WonderQueue {
 
   private int size, front, rear;

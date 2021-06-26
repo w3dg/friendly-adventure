@@ -9,7 +9,6 @@ public class Shift {
   Shift(int mm, int nn) {
     m = mm;
     n = nn;
-
     mat = new int[m][n];
   }
 
