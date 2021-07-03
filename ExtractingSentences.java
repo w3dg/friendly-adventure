@@ -3,7 +3,7 @@ import java.util.StringTokenizer;
 public class ExtractingSentences {
   public static void main(String[] args) {
     String s = "I love science.How are you?Science is amazing!";
-    String p = "[.?!]"; // can be ain any order.
+    String p = "[.?!]"; // can be in any order.
 
     StringTokenizer st = new StringTokenizer(s, p); // string, delimiters
     System.out.println(st.countTokens());
