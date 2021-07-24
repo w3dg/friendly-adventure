@@ -1,4 +1,4 @@
-package Circles;
+package Geometry;
 
 public class Circle {
 

@@ -1,4 +1,4 @@
-package Circles;
+package Geometry;
 
 public class Point {
 
@@ -15,7 +15,7 @@ public class Point {
   }
 
   public void display() {
-    System.out.println("The coordinates are : " + this.x + "," + this.y);
+    System.out.print("    (" + this.x + "," + this.y + ")");
   }
 
 }
