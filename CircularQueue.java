@@ -1,12 +1,12 @@
 import java.util.Scanner;
 
-public class Queue {
+public class CircularQueue {
 
   int arr[];
   int size;
   int front, rear;
 
-  Queue(int s) {
+  CircularQueue(int s) {
     size = s;
     arr = new int[s];
     front = rear = -1;
@@ -14,13 +14,15 @@ public class Queue {
   }
 
   void insert(int x) {
-    if (rear + 1 == size) {
+    if (front == 0 && rear + 1 == size || rear + 1 == front) {
 
       System.out.println("Queue is full");
       return;
     }
 
-    if (rear == -1)
+    if (rear + 1 == size)
+      rear = -1;
+    if (front == -1)
       front = 0;
 
     arr[++rear] = x;
@@ -36,6 +38,8 @@ public class Queue {
 
     if (front == rear) // only one left
       front = rear = -1;
+    else if (front + 1 == size)
+      front = 0;
     else
       front++;
 
@@ -47,9 +51,19 @@ public class Queue {
       System.out.println("Queue is empty");
       return;
     }
-    for (int i = front; i <= rear; i++) {
-      System.out.print(arr[i] + " ");
+
+    if (front < rear) {
+      for (int i = front; i <= rear; i++)
+        System.out.print(arr[i] + " ");
+      System.out.println();
+    } else {
+      for (int i = front; i < size; i++)
+        System.out.print(arr[i] + " ");
+      for (int i = 0; i <= rear; i++)
+        System.out.print(arr[i] + " ");
+      System.out.println();
     }
+
     System.out.println();
   }
 
@@ -58,17 +72,23 @@ public class Queue {
 
     System.out.println("Enter range");
     int range = sc.nextInt();
-    Queue q = new Queue(range);
+    CircularQueue q = new CircularQueue(range);
 
     for (int i = 0; i <= range; i++) {
       System.out.println("Enter a number");
       q.insert(sc.nextInt());
     }
     q.display();
-    for (int i = 0; i < range; i++) {
+    for (int i = 0; i < range - 2; i++) {
 
       q.remove();
-      q.display();
+
     }
+    q.display();
+
+    System.out.println("Enter a number");
+    q.insert(sc.nextInt());
+
+    q.display();
   }
 }
