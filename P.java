@@ -1,19 +1,23 @@
 public class P {
-  // overriding the toString method from super :)
-  // every class is a subclass of java.lang.Object
 
-  public String toString() {
-    return ("Hey there my gorgeous friend");
+  static void fun(int n) {
+    int i, f;
+    for (i = 1, f = 1; i <= n; f *= i++)
+      ;
+    System.out.println(f);
+  }
+
+  static int test(int n) {
+    if (n < 2)
+      return 0;
+    for (int i = 2; i <= (int) (Math.sqrt(n)); i++)
+      if (n % i == 0)
+        return 0;
+    return 1;
   }
 
   public static void main(String[] args) {
-    P obj = new P();
-    P obj1 = new P();
-    P obj2 = new P();
-
-    System.out.println(obj);
-    System.out.println(obj1);
-    System.out.println(obj2.toString());
-
+    fun(4);
+    System.out.println(test(0));
   }
 }

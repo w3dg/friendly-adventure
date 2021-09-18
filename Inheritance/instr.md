@@ -1,29 +1,28 @@
-// A superclass Perimeter has been defined to calculate the perimeter of a
-// parallelogram. Define a subclass Area to compute the area of the
-// parallelogram by using the required data members of the superclass. The
-// details are given below
+A superclass Perimeter has been defined to calculate the perimeter of a
+parallelogram. Define a subclass Area to compute the area of the
+parallelogram by using the required data members of the superclass. The
+details are given below
 
-// Class name: Perimeter
-// Data members/instance variables:
-// a: to store the length in decimal
-// b: to store the breadth in decimal
-// Member functions:
-// Perimeter (…): parameterized constructor to assign values to data members
-// double Calculate(): calculate and return the perimeter of a parallelogram is
-// 2\* (length + breadth)
-// void show(): to display the data members along with the perimeter of the
-// parallelogram
+Class name: Perimeter
+Data members/instance variables:
+a: to store the length in decimal
+b: to store the breadth in decimal
+Member functions:
+Perimeter (…): parameterized constructor to assign values to data members
+double Calculate(): calculate and return the perimeter of a parallelogram is 2\* (length + breadth)
+void show(): to display the data members along with the perimeter of the
+parallelogram
 
-// Class name: Area
-// Data members/instance variables:
-// h: to store the height in decimal
-// area: to store the area of the parallelogram
-// Member functions:
-// Area(…): parameterized constructor to assign values to data members of both
-// the classes
-// void doarea(): compute the area as (breadth \* height)
-// void show(): display the data members of both classes along with the area and
-// perimeter of the parallelogram.
+Class name: Area
+Data members/instance variables:
+h: to store the height in decimal
+area: to store the area of the parallelogram
+Member functions:
+Area(…): parameterized constructor to assign values to data members of both
+the classes
+void doarea(): compute the area as (breadth \* height)
+void show(): display the data members of both classes along with the area and
+perimeter of the parallelogram.
 
 ===============================================================================================
 superclass Number is defined to calculate the factorial of a number. Define a subclass Series to find the sum of the series S = 1! + 2! + 3! + 4! + ………. + n!
