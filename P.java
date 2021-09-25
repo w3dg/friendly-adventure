@@ -17,7 +17,7 @@ public class P {
   }
 
   public static void main(String[] args) {
-    fun(4);
+    // fun(4);
     System.out.println(test(0));
   }
 }
