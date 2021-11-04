@@ -1,4 +1,4 @@
-public class P {
+class P {
 
   static void fun(int n) {
     int i, f;
