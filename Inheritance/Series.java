@@ -1,3 +1,4 @@
+package Inheritance;
 
 class Number {
   int n;
@@ -7,33 +8,33 @@ class Number {
   }
 
   int factorial(int a) {
-    if (a <= 0)
+    if (a == 0)
       return 1;
     return a * factorial(a - 1);
   }
 
   void display() {
-    System.out.println("Limit is " + n);
+    System.out.println("Value of range is " + n);
   }
 }
 
 public class Series extends Number {
   int sum;
 
-  Series(int limit) {
-    super(limit);
+  Series(int range) {
+    super(range);
     sum = 0;
   }
 
   void calsum() {
-    for (int i = 1; i <= n; i++)
+    for (int i = 1; i <= n; i++) {
       sum += factorial(i);
+    }
   }
 
   void display() {
     super.display();
     calsum();
-    System.out.println("Sum of the series is" + sum);
-
+    System.out.println("Sum of the series is " + sum);
   }
 }

@@ -1,3 +1,4 @@
+package Inheritance;
 
 class Perimeter {
   double a, b;

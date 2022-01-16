@@ -1,3 +1,5 @@
+package Inheritance;
+
 class Detail {
 
   String name, address;

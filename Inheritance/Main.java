@@ -1,3 +1,4 @@
+package Inheritance;
 
 import java.util.Scanner;
 
@@ -15,6 +16,7 @@ class Main {
     // double rent = sc.nextDouble();
 
     // Detail obj1 = new Detail(name, addr, tel, rent);
+    // decided at runtime
     // Detail obj2 = new Bill(no, name, addr, tel, rent); // ? dynamic binding
     // Bill obj = new Bill(no, name, addr, tel, rent);
     // obj.show();
@@ -25,7 +27,16 @@ class Main {
     // Area ar = new Area(5, 4, 3);
     // ar.show();
 
-    Series series = new Series(6);
-    series.display();
+    // Series series = new Series(6);
+    // series.display();
+
+    // Scanner sc = new Scanner(System.in);
+    // System.out.println("Enter number of students");
+    // int n = sc.nextInt();
+    // Highest ob = new Highest(n);
+    // ob.display();
+
+    Sales ob = new Sales("Gaming PC", 12312, 2200000.0, 60);
+    ob.show();
   }
 }
