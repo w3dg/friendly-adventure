@@ -36,7 +36,10 @@ class Main {
     // Highest ob = new Highest(n);
     // ob.display();
 
-    Sales ob = new Sales("Gaming PC", 12312, 2200000.0, 60);
-    ob.show();
+    // Sales ob = new Sales("Gaming PC", 12312, 2200000.0, 60);
+    // ob.show();
+
+    Wages w = new Wages("Mahmud", 500000, 5, 20.0);
+    w.display();
   }
 }
