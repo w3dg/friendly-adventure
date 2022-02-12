@@ -22,7 +22,6 @@ public class AuroTwoD {
           numbers += t + " ";
         }
       }
-
     }
 
     System.out.println(numbers);
