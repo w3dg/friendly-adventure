@@ -16,25 +16,32 @@ public class WonderQueue {
       System.out.println("The wonder is full");
       return;
     }
-    if (front == -1)
+    if (front == -1) // only for first time.
       front = 0;
     ele[++rear] = x;
   }
 
   int popItem() {
-    if (rear == -1) {
+    if (front == -1) {
       System.out.println("The wonder is empty");
       return -999999;
     }
 
     int t = ele[front];
+    // if (front == rear) {
+    // front = rear = -1;
+    // return -999999;
+    // } else {
+    // front++;
+    // return t;
+    // }
+
     if (front == rear) {
       front = rear = -1;
-      return -999999;
     } else {
       front++;
-      return t;
     }
+    return t;
   }
 
   void printWonder() {
