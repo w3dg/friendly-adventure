@@ -23,7 +23,7 @@ class StackZero {
     if (top == 0) // empty ( this is what we started with )
       System.out.println("Stack Underflow");
     else {
-      x = s[top--];
+      x = s[--top]; // top is one step ahead. Proper value is not removed with top--
       System.out.println("Element deleted is=" + x);
     }
   }
