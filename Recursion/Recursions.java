@@ -47,21 +47,36 @@ public class Recursions {
     return (int) Math.pow(n % 10, p) + digitsRaisedToPower(n / 10, p);
   }
 
+  // decimal to hexadecimal recursively
+  static String decToHex(int dec) {
+    if (dec == 1) {
+      return "";
+    }
+    return decToHex(dec / 16) + (char) ((dec % 16) < 10 ? (dec % 16 + 48) : (55 + (dec % 16)));
+  }
+
+  // TODO: Anagram
+
   public static void main(String[] args) {
-    isHappy(7);
-    isHappy(1);
-    isHappy(3);
-    isHappy(4);
+    // isHappy(7);
+    // isHappy(1);
+    // isHappy(3);
+    // isHappy(4);
 
-    System.out.println("MOM".equals(reverseStrRec("MOM")) ? "Palindrome" : "Not a palindrome");
-    System.out.println(121 == reverseInt(121) ? "Palindrome" : "Not a palindrome");
+    // System.out.println("MOM".equals(reverseStrRec("MOM")) ? "Palindrome" : "Not a
+    // palindrome");
+    // System.out.println(121 == reverseInt(121) ? "Palindrome" : "Not a
+    // palindrome");
 
-    Scanner sc = new Scanner(System.in);
-    System.out.println("Enter a number");
-    int a = sc.nextInt();
-    int countDigits = (int) Math.log10(a) + 1;
-    System.out
-        .println((a == digitsRaisedToPower(a, countDigits) ? "Narcissistic Number" : "Not a Narcissistic Number"));
-    sc.close();
+    // Scanner sc = new Scanner(System.in);
+    // System.out.println("Enter a number");
+    // int a = sc.nextInt();
+    // int countDigits = (int) Math.log10(a) + 1;
+    // System.out
+    // .println((a == digitsRaisedToPower(a, countDigits) ? "Narcissistic Number" :
+    // "Not a Narcissistic Number"));
+    // sc.close();
+
+    System.out.println(decToHex(16));
   }
 }
