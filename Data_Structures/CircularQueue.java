@@ -75,23 +75,23 @@ public class CircularQueue {
       System.out.println("Enter your choice:");
       int ch = sc.nextInt();
       switch (ch) {
-      case 1:
-        System.out.println("Enter an element for insertion");
-        int x = sc.nextInt();
-        obj.insert(x);
-        break;
-      case 2:
-        obj.delete();
-        break;
-      case 3:
-        obj.display();
-        break;
-      case 4:
-        flag = false;
-        break;
-      default:
-        System.out.println("Please re-enter with a valid choice");
-        break;
+        case 1:
+          System.out.println("Enter an element for insertion");
+          int x = sc.nextInt();
+          obj.insert(x);
+          break;
+        case 2:
+          obj.delete();
+          break;
+        case 3:
+          obj.display();
+          break;
+        case 4:
+          flag = false;
+          break;
+        default:
+          System.out.println("Please re-enter with a valid choice");
+          break;
       }
     }
     sc.close();
