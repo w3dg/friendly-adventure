@@ -1,3 +1,4 @@
+package Inheritance;
 
 class Bank {
   long accno;
@@ -40,6 +41,7 @@ public class AccountISC extends Bank {
         p = t;
       }
     }
+    p -= amt;
   }
 
   void displays() {
